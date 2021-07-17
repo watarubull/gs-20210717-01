@@ -1,0 +1,97 @@
+@charset "utf-8";
+html {}
+
+/* 
+
+ここはメモだよ
+複数行でも対応してますよ
+
+
+*/
+body {
+    color: #333333;
+}
+*{box-sizing: border-box;}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a{transition: ease opacity 0.4s;opacity: 1;}
+a:hover{opacity: 0.5;}
+
+/* 共通
+====================================================*/
+.inner{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.txt{
+    text-align: justify;
+    line-height: 1.6875;
+}
+.flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.flex.tri>*{
+    width: calc((100% - 24px * 2) / 3);
+    margin-right: 24px;
+}
+.flex.tri>*:nth-child(3n){margin-right: 0;}
+.content{padding: 90px 0 60px;}
+.sec-title{
+    margin-bottom: 60px;
+    text-align: center;
+}
+.sec-title span{
+    display: block;
+    margin-bottom: 1em;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFD61A;
+}
+.bgGray .sec-title{color: #333333;}
+.btn01{text-align: center;}
+.btn01 a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 264px;
+    min-height: 60px;
+    padding: 1em 2em;
+    font-weight: bold;
+    line-height: 1.0;
+    color: #FFF;
+    background-color: #FFD61A;
+}
+
+/* #secNews
+====================================================*/
+#secNews .news-list li a{display: block;}
+#secNews .news-list .img img{width: 100%;}
+#secNews .news-list .box{
+    padding: 24px 16px 0;
+}
+#secNews .news-list .title{margin-bottom: 1.5em;}
+#secNews .news-list .date{margin-top: 1em;font-size: 14px; color: #999999;}
+#secNews .news-list + .btn01{margin-top: 40px;}
+
+@media screen and (max-width: 1140px){
+.inner{width: 90%;}
+}
+
+@media screen and (max-width: 768px){
+.content{padding: 40px 0;}
+.flex.tri>*{
+    display: block;
+    width: 100%;
+    margin-right: 0;
+}
+.flex.tri>* + *{margin-top: 24px;}
+.sec-title{margin-bottom: 40px;}
+/* #secNews
+====================================================*/
+#secNews .inner{width: 100%;}
+}
